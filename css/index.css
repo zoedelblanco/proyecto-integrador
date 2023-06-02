@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .logo{
     border-radius: 360px;
     align-self: center;
@@ -5,6 +9,5 @@
 }
 
 body{
-    background-color: #5B9EF8;
-    background:linear-gradient()
+    background-color: linear-gradient(#4B4B4B, 40%,#000000 ,60%)
 }
