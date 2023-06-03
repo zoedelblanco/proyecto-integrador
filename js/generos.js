@@ -12,11 +12,11 @@ fetch(url)
 
         let hola= []
 
-        for (let i = 0; i < data.name.length; i++) {
+        for (let i = 1; i < 6; i++) {
 
             hola += `<article>
-                <img src= "${data.picture[i]}" alt='' />
-                <p>Name: ${data.name[i]} </p>
+                <img src= "${data.data[i].picture}" alt='' />
+                <p>Name: ${data.data[i].name} </p>
                 <a href=""> Ir a detalle </a>
             </article>`
 
