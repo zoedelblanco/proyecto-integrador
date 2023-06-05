@@ -3,14 +3,8 @@
 body{
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-<<<<<<< HEAD
  }
  /* header */
-=======
-}
- 
-/* header */
->>>>>>> 81ba11a39c145ba0f0ec275c7b47f4f352df0cc8
 
 nav {
     display: flex;
@@ -51,7 +45,6 @@ nav ul li a{
     margin: 10px;
 }
 
-<<<<<<< HEAD
 header nav {
     display: flex;
     flex-direction: row;
@@ -86,21 +79,11 @@ nav ul li a{
     text-align: center;
 }
 
-=======
->>>>>>> 81ba11a39c145ba0f0ec275c7b47f4f352df0cc8
 .home{
     display: flex;
     flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-
-=======
-header{
-    width: 100%;
-    text-align: center;
-}
->>>>>>> 81ba11a39c145ba0f0ec275c7b47f4f352df0cc8
 
 /* section */
 section{
@@ -119,22 +102,13 @@ article h1{
     padding: 2%;
 }
 
-
-
-
-
 /* footer */
 
 footer{
     text-align: center;
-<<<<<<< HEAD
     background-color: rgb(8, 8, 95);
     color: #a19c9c;
     margin: 10px;
     padding: 2%;
-=======
-    padding: 20px;
-    font-size: 14px;
->>>>>>> 81ba11a39c145ba0f0ec275c7b47f4f352df0cc8
 }
 
