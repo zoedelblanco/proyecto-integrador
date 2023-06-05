@@ -17,8 +17,8 @@ fetch(url)
             <a href=""> Ir a detalle </a>
         </ul>`
 
-        contenedor.innerHTML=home
         }
+        contenedor.innerHTML=home
     })
     .catch(function (error) {
         console.log("Error: " + error);
