@@ -1,8 +1,8 @@
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-//Punto 1//
 
+//Punto 1//
 let formulario = document.querySelector(".formulario");
-let buscar = document.querySelector('[name.buscar]')
+let buscar = document.querySelector('[name=buscar]')
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -40,21 +40,4 @@ fetch(url)
     })
     .catch(function (error) {
         console.log("Error: " + error);
-    })
-
-// buscador//
-    let form = document.querySelector("form")
-    let buscar = document.querySelector("[name=buscar]")
-
-    form.addEventListener('submit',function(e){
-        e.preventDefault()
-        if(buscar.value === ''){                            
-            alert('El buscador no puede estar vacio')
-        }else if (buscar.value.length < 3){
-            alert('El termino buscado debe tener al menos 3 caracteres')
-    
-    
-        }else {
-            form.submit()
-        }
     })
