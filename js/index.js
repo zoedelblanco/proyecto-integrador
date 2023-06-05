@@ -26,7 +26,7 @@ fetch(url)
             home +=  `<ul>
             <img src= "${data.data[i].picture}" alt='' />
             <p>Name: ${data.data[i].name} </p>
-            <a href=""> Ir a detalle </a>
+            <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
         </ul>`
 
         }
@@ -34,4 +34,21 @@ fetch(url)
     })
     .catch(function (error) {
         console.log("Error: " + error);
+    })
+
+// buscador//
+    let form = document.querySelector("form")
+    let buscar = document.querySelector("[name=buscar]")
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault()
+        if(buscar.value === ''){                            
+            alert('El buscador no puede estar vacio')
+        }else if (buscar.value.length < 3){
+            alert('El termino buscado debe tener al menos 3 caracteres')
+    
+    
+        }else {
+            form.submit()
+        }
     })
