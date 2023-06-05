@@ -1,14 +1,20 @@
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 //Punto 1//
 
-/*let formulario = document.querySelector(".formulario");
-if (  == " ") {
-    alert("El campo de busqueda no puede estar vacio");
-}
+let formulario = document.querySelector(".formulario");
+let buscar = document.querySelector('[name.buscar]')
 
-if ( < 3){
-    alert("El termino buscado debe tener al menos 3 caracteres");
-} */
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+    if (buscar.value == '') {
+        alert("El campo de busqueda no puede estar vacio");
+    }else if (buscar.value.length < 3){
+        alert("El termino buscado debe tener al menos 3 caracteres");
+    } else {
+        form.submit()
+    }
+})
+
 
 //Punto 2//
 
