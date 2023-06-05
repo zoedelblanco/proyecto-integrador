@@ -1,4 +1,16 @@
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+//Punto 1//
+
+/*let formulario = document.querySelector(".formulario");
+if (  == " ") {
+    alert("El campo de busqueda no puede estar vacio");
+}
+
+if ( < 3){
+    alert("El termino buscado debe tener al menos 3 caracteres");
+} */
+
+//Punto 2//
 
 fetch(url)
     .then(function (response) {
@@ -17,8 +29,8 @@ fetch(url)
             <a href=""> Ir a detalle </a>
         </ul>`
 
-        contenedor.innerHTML=home
         }
+        contenedor.innerHTML=home
     })
     .catch(function (error) {
         console.log("Error: " + error);

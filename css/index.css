@@ -3,7 +3,9 @@
 body{
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- }
+}
+/* header */
+
  /* header */
 
 nav {
@@ -85,6 +87,11 @@ nav ul li a{
 }
 
 
+header{
+    width: 100%;
+    text-align: center;
+}
+
 /* section */
 section{
     display: flex;
@@ -110,5 +117,7 @@ footer{
     color: #a19c9c;
     margin: 10px;
     padding: 2%;
+    padding: 20px;
+    font-size: 14px;
 }
 
