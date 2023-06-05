@@ -1,3 +1,15 @@
+//Punto 1//
+
+let formulario = document.querySelector(".formulario");
+if (  == " ") {
+    alert("El campo de busqueda no puede estar vacio");
+}
+
+if ( < 3){
+    alert("El termino buscado debe tener al menos 3 caracteres");
+}
+
+//Punto 2//
 let url = "https://api.deezer.com/artist/27/related"
 
 fetch(url)
