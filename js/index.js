@@ -26,14 +26,14 @@ fetch(url)
 
         console.log(data);
         let contenedor = document.querySelector(".articulos3");
-        let home =[];
+        let home = '';
         
-        for (let i=0; i<5; i++){
-            home +=  `<ul>
+        for (let i = 0; i < 5; i++){
+            home +=  `<article>
             <img src= "${data.data[i].picture}" alt='' />
             <p>Name: ${data.data[i].name} </p>
             <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
-        </ul>`
+        </article>`
 
         }
         contenedor.innerHTML=home
@@ -42,7 +42,7 @@ fetch(url)
         console.log("Error: " + error);
     })
 
-    
+
 //canciones//
 let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/track"
 
