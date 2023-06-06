@@ -1,6 +1,3 @@
-//busqueda//
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-
 //formulario//
 let formulario = document.querySelector(".formulario");
 let buscar = document.querySelector('[name=buscar]')
@@ -45,3 +42,4 @@ fetch(url)
     })
 
 //canciones//
+let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/track/3135556"
