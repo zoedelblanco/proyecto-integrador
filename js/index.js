@@ -1,6 +1,4 @@
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-
-//Punto 1//
+//busqueda//
 let formulario = document.querySelector(".formulario");
 let buscar = document.querySelector('[name=buscar]')
 
@@ -16,7 +14,8 @@ form.addEventListener('submit', function(e){
 })
 
 
-//Punto 2//
+//artistas//
+let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 
 fetch(url)
     .then(function (response) {
@@ -41,3 +40,5 @@ fetch(url)
     .catch(function (error) {
         console.log("Error: " + error);
     })
+
+//canciones//
