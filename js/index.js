@@ -1,6 +1,8 @@
+
+
 //formulario//
 let formulario = document.querySelector(".formulario");
-let buscar = document.querySelector('[name=buscar]')
+let buscar = document.querySelector('[name=buscador]')
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -8,6 +10,7 @@ form.addEventListener('submit', function(e){
         alert("El campo de busqueda no puede estar vacio");
     }else if (buscar.value.length < 3){
         alert("El termino buscado debe tener al menos 3 caracteres");
+
     } else {
         form.submit()
     }
