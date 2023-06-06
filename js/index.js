@@ -17,7 +17,6 @@ form.addEventListener('submit', function(e){
 
 //artistas//
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-
 fetch(url)
     .then(function(response) {
         return response.json()
@@ -31,7 +30,34 @@ fetch(url)
         let home = [];
         
         for (let i = 0; i < 5; i++){
+            home +=  `<ul>
+            <img src= "${data.data[i].picture}" alt='' />
+            <p>Name: ${data.data[i].name} </p>
+            <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
+        </ul>`
 
+        }
+        contenedor.innerHTML=home
+    })
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })
+
+
+//canciones//
+let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/track"
+
+fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+
+        console.log(data);
+        let contenedor = document.querySelector(".articulos1");
+        let home =[];
+        
+        for (let i=0; i<5; i++){
             home +=  `<ul>
                 <img src= "${data.data[i].picture}" alt='' />
                 <p>Name: ${data.data[i].name} </p>
