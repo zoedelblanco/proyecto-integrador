@@ -24,7 +24,7 @@ fetch(url)
     .then(function (data) {
 
         console.log(data);
-        let contenedor = document.querySelector(".articulos3");
+        let contenedor = document.querySelector(".artistas");
         let home = [];
         
         for (let i=0; i<5; i++){
@@ -51,7 +51,7 @@ fetch(url)
     .then(function (data) {
 
         console.log(data);
-        let contenedor = document.querySelector(".articulos1");
+        let contenedor = document.querySelector(".canciones");
         let home = [];
         
         for (let i = 0; i < 5; i++){
@@ -77,7 +77,7 @@ fetch(url3)
     .then(function (data) {
 
         console.log(data);
-        let contenedor = document.querySelector(".articulos2");
+        let contenedor = document.querySelector(".albumes");
         let home = [];
         
         for (let i = 0; i < 5; i++){
