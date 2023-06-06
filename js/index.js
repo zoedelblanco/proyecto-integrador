@@ -70,7 +70,7 @@ fetch(url)
 
 //albums//
 let url3 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-fetch(url3)
+fetch(url)
     .then(function (response) {
         return response.json()
     })
