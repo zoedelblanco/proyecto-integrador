@@ -1,6 +1,6 @@
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 
-//Punto 1//
+//formulario//
 let formulario = document.querySelector(".formulario");
 let buscar = document.querySelector('[name=buscar]')
 
