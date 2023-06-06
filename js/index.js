@@ -42,8 +42,8 @@ fetch(url)
     })
 
 //canciones//
-let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
-fetch(url2)
+let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/track"
+fetch(url)
     .then(function (response) {
         return response.json()
     })
