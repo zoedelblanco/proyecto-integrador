@@ -12,13 +12,13 @@ form.addEventListener('submit', function(e){
     } else {
         form.submit()
     }
-})*/
+}) */
 
 
 //artistas//
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 fetch(url)
-    .then(function (response) {
+    .then(function(response) {
         return response.json()
     })
     .then(function (data) {
@@ -36,9 +36,10 @@ fetch(url)
 
         }
         contenedor.innerHTML=home
+
     })
-    .catch(function (error) {
-        console.log("Error: " + error);
+    .catch(function(error) {
+        console.log("Eroor: " + error);
     })
 
 //canciones//
