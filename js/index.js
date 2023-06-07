@@ -14,7 +14,6 @@ form.addEventListener('submit', function(e){
     }
 }) */
 
-
 //artistas//
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
 fetch(url)
