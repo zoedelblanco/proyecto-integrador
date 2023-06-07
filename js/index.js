@@ -43,8 +43,9 @@ fetch(url)
     })
 
 //canciones//
-let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/track"
-fetch(url)
+let url2 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
+
+fetch(url2)
     .then(function (response) {
         return response.json()
     })
@@ -56,8 +57,8 @@ fetch(url)
         
         for (let i = 0; i < 5; i++){
             home +=  `<ul>
-            <img src= "${data.data[i].picture}" alt='' />
-            <p>Name: ${data.data[i].name} </p>
+            <img src= "${data.data[i].album.cover_medium}" alt='' />
+            <p>Name: ${data.data[i].title} </p>
             <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
         </ul>`
 
@@ -69,7 +70,7 @@ fetch(url)
     })
 
 //albums//
-let url3 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+let url3 = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
 fetch(url)
     .then(function (response) {
         return response.json()
@@ -82,8 +83,8 @@ fetch(url)
         
         for (let i = 0; i < 5; i++){
             home +=  `<ul>
-            <img src= "${data.data[i].picture}" alt='' />
-            <p>Name: ${data.data[i].name} </p>
+            <img src= "${data.data[i].id}" alt='' />
+            <p>Name: ${data.data[i].titel} </p>
             <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
         </ul>`
 
