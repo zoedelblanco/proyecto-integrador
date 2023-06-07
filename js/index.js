@@ -1,19 +1,3 @@
-//formulario//
-/*let formulario = document.querySelector(".formulario");
-let buscar = document.querySelector('[name=buscador]')
-
-form.addEventListener('submit', function(e){
-    e.preventDefault()
-    if (buscar.value == '') {
-        alert("El campo de busqueda no puede estar vacio");
-    }else if (buscar.value.length < 3){
-        alert("El termino buscado debe tener al menos 3 caracteres");
-
-    } else {
-        form.submit()
-    }
-}) */
-
 //canciones//
 let web = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
 fetch(web)
@@ -92,3 +76,19 @@ fetch(url)
     .catch(function (error) {
         console.log("Error: " + error);
     })
+
+//formulario//
+let formulario = document.querySelector(".formulario");
+let buscar = document.querySelector("name=buscar")
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault()
+    if (buscar.value === '') {
+        alert("El campo de busqueda no puede estar vacio");
+    }else if (buscar.value.length < 3){
+        alert("Lo buscado debe tener al menos 3 caracteres");
+
+    } else {
+        form.submit()
+    }
+})
