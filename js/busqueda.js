@@ -1,22 +1,29 @@
+let busqueda= new URLSearchParams(location.search)
 let buscar = busqueda.get('buscar')
 let resultados = document.querySelector('.resultados')
 let contenido = ''                                      
 let titulo = document.querySelector('.busqueda')  
 titulo.innerHTML += buscar        
+
 fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${buscar}`)
-.then(respuesta =>{
-   return respuesta.json()
+.then(function (response){
+   return response.json()
 })
-.then(dataBusqueda =>{
-    for(let i=0; i < dataBusqueda.data.length; i++){  
-        contenido += `<article class="contenidoResultados">
-                        <p class="titulosCanciones"><a href="detallecancion.html?id=${dataBusqueda.data[i].id}"> ${dataBusqueda.data[i].title} </a></p>
+.then(function (data){
+   console.log(data);
+
+   let contenedor = document.querySelector(".resultados");
+   let contenido = [];
+    for(let i=0; i < data.data.length; i++){  
+        contenido += `<article class="resultados">
+                        <p class="resultados"><a href="detalle-cancion.html?id=${data.data[i].id}"> ${data.data[i].title} </a></p>
                      </article>`
    }
    resultados.innerHTML += contenido
-   if(dataBusqueda.data.length == 0){
+   if(data.data.length == 0){
       alert('La busqueda no trajo resultados')
    }
+   contenedor.innerHTML=contenido
 })
 .catch(error =>{
    console.log(error);
