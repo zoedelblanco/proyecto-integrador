@@ -78,17 +78,18 @@ fetch(url)
     })
 
 //formulario//
-let formulario = document.querySelector(".formulario");
-let buscar = document.querySelector("name=buscar")
+let formulario = document.querySelector('form');
+let inputDeBusqueda = document.querySelector('input');
 
 formulario.addEventListener('submit', function(e){
-    e.preventDefault()
-    if (buscar.value === '') {
-        alert("El campo de busqueda no puede estar vacio");
-    }else if (buscar.value.length < 3){
-        alert("Lo buscado debe tener al menos 3 caracteres");
+    e.preventDefault();
 
+    if (inputDeBusqueda.value === "") {
+        alert('El campo de busqueda no puede estar vacio')
+    } 
+    else if (inputDeBusqueda.value.length < 3){
+        alert('Lo buscado debe tener al menos 3 caracteres');
     } else {
-        form.submit()
+        this.submit()
     }
 })
