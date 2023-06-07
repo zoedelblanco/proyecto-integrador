@@ -9,10 +9,10 @@ fetch(web)
         console.log(data);
         let contenedor = document.querySelector(".canciones");
         let home = [];
-
-        for (let i = 0; i < 5; i++) {
-            home += `<ul>
-            <img src= "${data.data[i].album.cover}" alt='' />
+        
+        for (let i=0; i<5; i++){
+            home +=  `<ul>
+            <img src= "${data.data[i].album.cover_medium}" alt='' />
             <p>Name: ${data.data[i].title} </p>
             <a href="detalle-cancion.html?id=${data.data[i].id}">Ir a detalle </a>
         </ul>`
