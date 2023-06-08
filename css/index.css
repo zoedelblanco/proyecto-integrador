@@ -3,6 +3,7 @@
 body{
     width: 100%;
     background-color: white;
+    margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -93,7 +94,7 @@ article h1{
 .canciones{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -101,7 +102,7 @@ article h1{
 .albumes{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -109,7 +110,7 @@ article h1{
 .artistas{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -131,6 +132,19 @@ article{
     justify-content: center;
 }
 
+.contenedor{
+    flex-wrap: wrap;
+    display: flex;
+    padding: 50px;
+}
+
+h1.home{
+    align-items: center;
+}
+
+.losGeneros{
+
+}
 
 /* footer */
 
