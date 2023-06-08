@@ -1,4 +1,4 @@
-let url= "https://api.allorigins.win/raw?url=https://api.deezer.com/genre"
+let url= "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre"
 
 fetch(url)
     .then(function (response) {
@@ -12,12 +12,12 @@ fetch(url)
 
         let hola= []
 
-        for (let i = 1; i < 6; i++) {
+        for (let i = 1; i < 7; i++) {
 
             hola += `<article>
-                <img src= "${data.data[i].picture}" alt='' />
-                <p>Name: ${data.data[i].name} </p>
-                <a href=""> Ir a detalle </a>
+                <img src= "${data.data[i].picture_medium}" alt='' />
+                <p>${data.data[i].name} </p>
+                <a href="detalle-genero.html">Ver mas</a>
             </article>`
 
         }

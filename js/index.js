@@ -1,5 +1,5 @@
 //canciones//
-let web = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
+let web = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks"
 fetch(web)
     .then(function (response) {
         return response.json()
@@ -13,8 +13,8 @@ fetch(web)
         for (let i=0; i<5; i++){
             home +=  `<ul>
             <img src= "${data.data[i].album.cover_medium}" alt='' />
-            <p>Name: ${data.data[i].title} </p>
-            <a href="detalle-cancion.html?id=${data.data[i].id}">Ir a detalle </a>
+            <p>${data.data[i].title} </p>
+            <a href="detalle-cancion.html?id=${data.data[i].id}">Ver mas</a>
         </ul>`
 
         }
@@ -25,7 +25,7 @@ fetch(web)
     })
 
 //albums//
-let link = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
+let link = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums"
 fetch(link)
     .then(function (response) {
         return response.json()
@@ -38,9 +38,9 @@ fetch(link)
 
         for (let i = 0; i < 5; i++) {
             home += `<ul>
-            <img src= "${data.data[i].cover}" alt='' />
-            <p>Name: ${data.data[i].title} </p>
-            <a href="detalle-album.html?id=${data.data[i].id}">Ir a detalle </a>
+            <img src= "${data.data[i].cover_medium}" alt='' />
+            <p>s${data.data[i].title} </p>
+            <a href="detalle-album.html?id=${data.data[i].id}">Ver mas</a>
         </ul>`
 
         }
@@ -51,7 +51,7 @@ fetch(link)
     })
 
 //artistas//
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists"
 fetch(url)
     .then(function (response) {
         return response.json()
@@ -64,9 +64,9 @@ fetch(url)
 
         for (let i = 0; i < 5; i++) {
             home += `<ul>
-            <img src= "${data.data[i].picture}" alt='' />
-            <p>Name: ${data.data[i].name} </p>
-            <a href="detalle-artista.html?id=${data.data[i].id}">Ir a detalle </a>
+            <img src= "${data.data[i].picture_medium}" alt='' />
+            <p>${data.data[i].name} </p>
+            <a href="detalle-artista.html?id=${data.data[i].id}">Ver mas</a>
         </ul>`
 
         }
