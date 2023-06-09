@@ -1,32 +1,30 @@
-let  objetoId = new URLSearchParams(location.search)
-let id = objetoId.get("id")
+let queryString = location.search;
+let objetoId = new URLSearchParams(queryString);
+let id = objetoId.get('id');
 
-let contenedor = document.querySelector('.detalleAlbum')
-let contenido = ''                                      
-  
+let detalle = document.querySelector('.detalleAlbum');
+let contenido = '';
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/albums${id}`)
-.then(function (response){
-   return response.json()
-})
-.then(function (data){
-   console.log(data);
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`;
 
-   let contenedor = document.querySelector(".detalleAlbum");
-   let contenido = [];
-   
-   for(let i=0; i < contenido.length; i++){
-    contenido += `<article class="detalleAlbum">
-    <img src="${data.data[i].cover_medium} alt="">
-    <p>${data.data[i].title}</p>
-    <p>${data.data[i].artist.name}</p>
-    <p>${data.data[i].genres.name}</p>
-    <p>${data.data[i].release_date}</p>
-    </article>`
-   }
-   contenedor.innerHTML = contenido
+fetch(url)
+   .then(function (response) {
+      return response.json()
+   })
+   .then(function (data) {
+      console.log(data);
+      
+      contenido += `<article class="detalleAlbum">
+         <img src="${data.cover_medium} alt="">
+         <p>${data.title}</p>
+         <p>${data.artist.name}</p>
+         <p>${data.genres.name}</p>
+         <p>${data.release_date}</p>
+         </article>`
 
-})
-.catch(function (error) {
-    console.log("Error: " + error);
-})
+      detalle.innerHTML = contenido
+
+   })
+   .catch(function (error) {
+      console.log("Error: " + error);
+   })
