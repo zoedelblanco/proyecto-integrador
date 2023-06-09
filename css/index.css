@@ -60,6 +60,9 @@ h5{
     margin-top: 2px;
 }
 
+h1{
+    color: white;
+}
 .logo{
     border-radius: 360px;
     border: 1px solid #2c2b2b;
@@ -146,20 +149,26 @@ h1.home{
     display: block;
 }
 
-.detalleCancion article{
-    display: block;
+.detalleCancion{
+    background-color: #2c2b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 30px;
+    border-radius: 26px;
 }
 
 .losGeneros{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin: 30px;
     border-radius: 26px;
-    background-color: #2c2b2b;
- }
+    background-color: #2c2b2b
+}
+
 
 img{
     border-radius: 15px;
