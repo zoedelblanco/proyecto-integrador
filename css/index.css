@@ -2,7 +2,7 @@
 
 body{
     width: 100%;
-    background-color: white;
+    background-color: black;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -38,14 +38,14 @@ nav ul li {
 
 nav ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
     font-size: 18px;
 }
 
 .logo{
     border-radius: 360px;
-    border: 1px solid #ccc;
+    border: 1px solid #2c2b2b;
     align-self: center;
     width: 120px;
     margin: 10px;
@@ -57,7 +57,7 @@ header nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: black;
     width: 100%;
     top:0;
     left:0;
@@ -83,11 +83,24 @@ section{
     padding-top: 50px;
     padding-top: 50px;
     text-align: center;
+    color: white;
+    background-color: black;
+}
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    border-radius: 26px;
+    background-color: #2c2b2b;
 }
 
 article h1{
     text-align: center;
     text-decoration: solid;
+    color: white;
 }
 
 .canciones{
@@ -115,15 +128,6 @@ article h1{
     text-align: center;
 }
 
-article{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 30px;
-}
-
 .resultados{
     display: flex;
     flex-direction: column;
@@ -136,21 +140,31 @@ h1.home{
     align-items: center;
 }
 
-.losGeneros{
+.h1generos{
+    color: white;
+    text-align: center;
+}
+ .losGeneros{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    border-radius: 26px;
+    background-color: #2c2b2b;
+ }
+img{
+    border-radius: 15px;
 }
 /* footer */
 
 footer{
     text-align: center;
-    background-color: rgb(8, 8, 95);
+    background-color: #2c2b2b;
     color: #a19c9c;
     margin: 10px;
-    padding: 2%;
-    padding: 20px;
+    padding: 10px;
     font-size: 14px;
 }
 
