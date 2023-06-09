@@ -19,6 +19,10 @@ nav {
     padding: 10px;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
 nav ul {
     display: flex;
     margin-top: 10px;
