@@ -12,8 +12,6 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
 .then(function (data){
    console.log(data);
 
-   let contenedor = document.querySelector(".resultados");
-   let contenido = [];
     for(let i=0; i < data.data.length; i++){  
         contenido += `<article class="resultados">
                         <p class="resultados"><a href="detalle-cancion.html?id=${data.data[i].id}"> ${data.data[i].title} </a></p>
@@ -23,7 +21,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
    if(data.data.length == 0){
       alert('La busqueda no trajo resultados')
    }
-   contenedor.innerHTML=contenido
+   contenido.innerHTML=contenido
 })
 .catch(function (error) {
    console.log("Error: " + error);
