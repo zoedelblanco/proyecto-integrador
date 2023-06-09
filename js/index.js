@@ -14,6 +14,7 @@ fetch(web)
             home +=  `<ul>
             <img src= "${data.data[i].album.cover_medium}" alt='' />
             <p>${data.data[i].title} </p>
+            <h5>${data.data[i].artist.name}</h5>
             <a href="detalle-cancion.html?id=${data.data[i].id}">Ver mas</a>
         </ul>`
 
