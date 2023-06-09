@@ -159,6 +159,10 @@ h1.home{
     border-radius: 26px;
 }
 
+.detalleArtista article{
+    display: block;
+}
+
 .losGeneros{
     display: flex;
     flex-direction: row;
