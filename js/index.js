@@ -36,7 +36,7 @@ fetch(link)
         let contenedor = document.querySelector(".albumes");
         let home = [];
 
-        for (let i = 0; i < 8; i++) {
+        for (let i = 4; i > 4 && i < 8; i++) {
             home += `<ul>
             <img src= "${data.data[i].cover_medium}" alt='' />
             <p>${data.data[i].title} </p>
