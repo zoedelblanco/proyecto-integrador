@@ -15,7 +15,7 @@ fetch(url)
       console.log(data);
       
       contenido += `<article class="detalleAlbum">
-         <img src="${data.cover_medium} alt="">
+         <img src="${data.cover_medium}" alt="">
          <p>${data.title}</p>
          <p>${data.artist.name}</p>
          <p>${data.genres.name}</p>
@@ -26,5 +26,5 @@ fetch(url)
 
    })
    .catch(function (error) {
-      console.log("Error: " + error);
-   })
+    console.log("Error: " + error);
+})

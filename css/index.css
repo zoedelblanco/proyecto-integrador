@@ -154,6 +154,10 @@ h1.home{
     display: block;
 }
 
+.detalleCancion article{
+    display: block;
+}
+
 .losGeneros{
     display: flex;
     flex-direction: row;
