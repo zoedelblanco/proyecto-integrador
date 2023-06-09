@@ -25,6 +25,6 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
    }
    contenedor.innerHTML=contenido
 })
-.catch(error =>{
-   console.log(error);
+.catch(function (error) {
+   console.log("Error: " + error);
 })
