@@ -5,7 +5,7 @@ let id = objetoId.get("id");
 let detalle = document.querySelector(".detalleCancion");
 let contenido = " ";
 
-let url =  `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+let url =  `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
 
 fetch(url)
    .then(function (response) {
