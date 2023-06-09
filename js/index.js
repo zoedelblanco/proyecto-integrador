@@ -10,7 +10,7 @@ fetch(web)
         let contenedor = document.querySelector(".canciones");
         let home = [];
         
-        for (let i=0; i<5; i++){
+        for (let i=0; i<8; i++){
             home +=  `<ul>
             <img src= "${data.data[i].album.cover_medium}" alt='' />
             <p>${data.data[i].title} </p>
@@ -36,10 +36,10 @@ fetch(link)
         let contenedor = document.querySelector(".albumes");
         let home = [];
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 8; i++) {
             home += `<ul>
             <img src= "${data.data[i].cover_medium}" alt='' />
-            <p>s${data.data[i].title} </p>
+            <p>${data.data[i].title} </p>
             <a href="detalle-album.html?id=${data.data[i].id}">Ver mas</a>
         </ul>`
 
@@ -62,7 +62,7 @@ fetch(url)
         let contenedor = document.querySelector(".artistas");
         let home = [];
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 8; i++) {
             home += `<ul>
             <img src= "${data.data[i].picture_medium}" alt='' />
             <p>${data.data[i].name} </p>
