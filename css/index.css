@@ -24,8 +24,9 @@ a{
     color: white;
 }
 
-p{
+h5{
     margin: 2px;
+    margin-top: 2px;
 }
 nav ul {
     display: flex;
