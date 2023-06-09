@@ -82,6 +82,7 @@ section{
     justify-content: space-around;
     padding-top: 50px;
     padding-top: 50px;
+    text-align: center;
 }
 
 article h1{
@@ -129,12 +130,6 @@ article{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.contenedor{
-    flex-wrap: wrap;
-    display: flex;
-    padding: 50px;
 }
 
 h1.home{
