@@ -8,7 +8,7 @@ body{
 }
 
 
- /* header */
+/* header */
 
 nav {
     display: flex;
@@ -22,6 +22,10 @@ nav {
 a{
     text-decoration: none;
     color: white;
+}
+
+p{
+    margin: 2px;
 }
 nav ul {
     display: flex;
