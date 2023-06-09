@@ -150,6 +150,10 @@ h1.home{
     display: block;
 }
 
+.detalleArtista article{
+    display: block;
+}
+
 .losGeneros{
     display: flex;
     flex-direction: row;
