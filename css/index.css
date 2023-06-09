@@ -8,15 +8,22 @@ body{
 }
 
 
- /* header */
+/* header */
+header{
+    width: 100%;
+    text-align: center;
+}
 
-nav {
+header nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
     width: 100%;
-    padding: 10px;
+    top:0;
+    left:0;
 }
 
 nav ul {
@@ -43,24 +50,21 @@ nav ul li a{
     font-size: 18px;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h5{
+    margin: 2px;
+    margin-top: 2px;
+}
+
 .logo{
     border-radius: 360px;
     border: 1px solid #2c2b2b;
-    align-self: center;
     width: 120px;
     margin: 10px;
-}
-
-header nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    width: 100%;
-    top:0;
-    left:0;
 }
 
 .home{
@@ -68,11 +72,6 @@ header nav {
     flex-wrap: wrap;
 }
 
-
-header{
-    width: 100%;
-    text-align: center;
-}
 
 /* section */
 section{
@@ -86,6 +85,7 @@ section{
     color: white;
     background-color: black;
 }
+
 article{
     display: flex;
     flex-direction: row;
@@ -96,7 +96,6 @@ article{
     border-radius: 26px;
     background-color: #2c2b2b;
 }
-
 
 article h1{
     text-align: center;
@@ -112,6 +111,7 @@ article h1{
     align-items: center;
     text-align: center;
 }
+
 .albumes{
     display: flex;
     flex-direction: row;
@@ -120,6 +120,7 @@ article h1{
     align-items: center;
     text-align: center;
 }
+
 .artistas{
     display: flex;
     flex-direction: row;
@@ -145,6 +146,10 @@ h1.home{
     display: block;
 }
 
+.detalleCancion article{
+    display: block;
+}
+
 .losGeneros{
     display: flex;
     flex-direction: row;
@@ -155,6 +160,7 @@ h1.home{
     border-radius: 26px;
     background-color: #2c2b2b;
  }
+
 img{
     border-radius: 15px;
 }
@@ -169,3 +175,12 @@ footer{
     font-size: 14px;
 }
 
+@media(min-width: 600px){
+  
+    .logo{
+        align-self: center;
+    }
+    header{
+        flex-wrap: nowrap;
+    }
+}

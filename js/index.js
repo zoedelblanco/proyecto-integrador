@@ -9,12 +9,13 @@ fetch(web)
         console.log(data);
         let contenedor = document.querySelector(".canciones");
         let home = [];
-        
-        for (let i=0; i<8; i++){
-            home +=  `<ul>
+
+        for (let i = 0; i < 8; i++) {
+            home += `<ul>
             <img src= "${data.data[i].album.cover_medium}" alt='' />
             <p>${data.data[i].title} </p>
-            <a href="detalle-cancion.html?id=${data.data[i].id}">Ver mas</a>
+            <h5>${data.data[i].artist.name}</h5>
+            <a href="detalle-cancion.html?id=${data.data[i].id}">ver mas</a>
         </ul>`
 
         }
@@ -23,6 +24,8 @@ fetch(web)
     .catch(function (error) {
         console.log("Error: " + error);
     })
+
+
 
 //albums//
 let link = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums"
@@ -81,13 +84,13 @@ fetch(url)
 let formulario = document.querySelector('form');
 let inputDeBusqueda = document.querySelector('input');
 
-formulario.addEventListener('submit', function(e){
+formulario.addEventListener('submit', function (e) {
     e.preventDefault();
 
     if (inputDeBusqueda.value === "") {
         alert('El campo de busqueda no puede estar vacio')
-    } 
-    else if (inputDeBusqueda.value.length < 3){
+    }
+    else if (inputDeBusqueda.value.length < 3) {
         alert('Lo buscado debe tener al menos 3 caracteres');
     } else {
         this.submit()
