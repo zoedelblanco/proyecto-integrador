@@ -141,19 +141,11 @@ h1.home{
     align-items: center;
 }
 
-<<<<<<< HEAD
 .detalleAlbum article {
     display: block;
 }
 
 .losGeneros{
-=======
-.h1generos{
-    color: white;
-    text-align: center;
-}
- .losGeneros{
->>>>>>> 7a2f7ef80b7512f0da46d18ca37c05c6af6a8a6e
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
