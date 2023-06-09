@@ -80,15 +80,13 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    padding-top: 50px;
+    padding-top: 50px;
 }
 
 article h1{
     text-align: center;
-    background-color: rgb(38, 124, 182);
     text-decoration: solid;
-    margin: 10px;
-    padding: 2%;
 }
 
 .canciones{
@@ -122,6 +120,7 @@ article{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin: 30px;
 }
 
 .resultados{
