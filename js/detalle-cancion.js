@@ -5,7 +5,7 @@ let id = objetoId.get("id");
 let detalle = document.querySelector(".detalleCancion");
 let contenido = " ";
 
-let url =  `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
 
 fetch(url)
    .then(function (response) {
@@ -13,18 +13,18 @@ fetch(url)
    })
    .then(function (data) {
       console.log(data);
-   
-   contenido += `<article class="detalleCancion">
+
+      contenido += `<article class="detalleCancion">
    <img src="${data.album.cover_medium}" alt="">
    <p>${data.title}</p>
    <p>${data.artist.name}</p>
    <p>${data.album.title}</p>
    </article>`
 
-   detalle.innerHTML = contenido
-})
+      detalle.innerHTML = contenido
+   })
 
 
    .catch(function (error) {
-    console.log("Error: " + error);
-})
+      console.log("Error: " + error);
+   })

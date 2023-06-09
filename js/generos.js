@@ -1,4 +1,4 @@
-let url= "https://api.allorigins.win/raw?url=https://api.deezer.com/genre"
+let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/genre"
 
 fetch(url)
     .then(function (response) {
@@ -7,10 +7,10 @@ fetch(url)
     .then(function (data) {
 
         console.log(data);
-        
-        let contenedor= document.querySelector(".losGeneros")
 
-        let hola= []
+        let contenedor = document.querySelector(".losGeneros")
+
+        let hola = []
 
         for (let i = 1; i < 7; i++) {
 
@@ -22,7 +22,7 @@ fetch(url)
 
         }
 
-            contenedor.innerHTML= hola
+        contenedor.innerHTML = hola
 
     })
     .catch(function (error) {

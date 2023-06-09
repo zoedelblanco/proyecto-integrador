@@ -9,17 +9,19 @@ let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}
 
 
 fetch(url)
-   .then(function (response) {
-      return response.json()
-   })
-   .then(function (data) {
-      console.log(data);
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log(data);
 
-      contenido += `<article class="detalleGenero">
+        contenido += `<article class="detalleGenero">
         <p>${data.name}</p>
         </article>`
 
-   })
-   .catch(function (error) {
-      console.log("Error: " + error);
-   })
+        detalle.innerHTML = contenido
+
+    })
+    .catch(function (error) {
+        console.log("Error: " + error);
+    })
