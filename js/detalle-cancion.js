@@ -15,7 +15,7 @@ fetch(url)
       console.log(data);
    
    contenido += `<article class="detalleCancion">
-   <img src="${data.album.cover}" alt="">
+   <img src="${data.album.cover_medium}" alt="">
    <p>${data.title}</p>
    <p>${data.artist.name}</p>
    <p>${data.album.title}</p>
