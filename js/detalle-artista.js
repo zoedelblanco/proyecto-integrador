@@ -15,7 +15,7 @@ fetch(url)
         console.log(data);
 
         contenido += `<article class="detalleArtista">
-            <img src="${data.picture}" alt="">
+            <img class="imgArtista"src="${data.picture}" alt="">
             <p>${data.name}</p>
             
             </article>`

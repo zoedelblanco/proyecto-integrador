@@ -159,8 +159,12 @@ h1.home {
 
 .detalleArtista article {
     display: block;
+    width: 250px;
 }
 
+.imgArtista{
+    width: 250px;
+}
 .tracksContainer ul {
     display: block;
     justify-content: center;
