@@ -5,10 +5,10 @@ let id = objetoId.get('id');
 let detalle = document.querySelector('.detalleGenero');
 let contenido = '';
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
+let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
+let urlGeneros = 
 
-
-fetch(url)
+fetch(urlArtistas)
     .then(function (response) {
         return response.json()
     })

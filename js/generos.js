@@ -15,9 +15,10 @@ fetch(url)
         for (let i = 1; i < 7; i++) {
 
             hola += `<article>
+                <a href="detalle-genero.html">
                 <img src= "${data.data[i].picture_medium}" alt='' />
                 <p>${data.data[i].name} </p>
-                <a href="detalle-genero.html">Ver mas</a>
+                </a>
             </article>`
 
         }

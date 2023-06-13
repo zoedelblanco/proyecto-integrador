@@ -12,10 +12,11 @@ fetch(web)
 
         for (let i = 0; i < 8; i++) {
             home += `<ul>
-            <img src= "${data.data[i].album.cover_medium}" alt='' />
+            <a href="detalle-cancion.html?id=${data.data[i].id}">
+            <img src= "${data.data[i].album.cover_medium}" alt=''>
             <p>${data.data[i].title} </p>
             <h5>${data.data[i].artist.name}</h5>
-            <a href="detalle-cancion.html?id=${data.data[i].id}">ver mas</a>
+            </a>
         </ul>`
 
         }
@@ -41,9 +42,10 @@ fetch(link)
 
         for (let i = 4; i < 10; i++) {
             home += `<ul>
-            <img src= "${data.data[i].cover_medium}" alt='' />
+            <a href="detalle-album.html?id=${data.data[i].id}">
+            <img src= "${data.data[i].cover_medium}" alt=''>
             <p>${data.data[i].title} </p>
-            <a href="detalle-album.html?id=${data.data[i].id}">Ver mas</a>
+            </a>
         </ul>`
 
         }
@@ -67,9 +69,10 @@ fetch(url)
 
         for (let i = 0; i < 8; i++) {
             home += `<ul>
-            <img src= "${data.data[i].picture_medium}" alt='' />
+            <a href="detalle-artista.html?id=${data.data[i].id}">
+            <img src= "${data.data[i].picture_medium}" alt=''>
             <p>${data.data[i].name} </p>
-            <a href="detalle-artista.html?id=${data.data[i].id}">Ver mas</a>
+            </a>
         </ul>`
 
         }
