@@ -31,6 +31,7 @@ fetch(urlArtistas)
         console.log("Error: " + error);
     })
 
+
 let urlGeneros = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
 
 let titulo= document.querySelector(".tituloDetalleGenero")
