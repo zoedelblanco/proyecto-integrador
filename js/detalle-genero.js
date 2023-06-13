@@ -6,7 +6,7 @@ let detalle = document.querySelector('.detalleGenero');
 let contenido = '';
 
 let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
-let urlGeneros = 
+let urlGeneros =
 
 fetch(urlArtistas)
     .then(function (response) {
