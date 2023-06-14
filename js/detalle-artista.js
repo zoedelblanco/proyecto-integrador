@@ -5,6 +5,8 @@ let id = objetoId.get("id");
 let detalle = document.querySelector(".detalleArtista");
 let contenido = " ";
 
+
+
 let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
 
 fetch(url)
