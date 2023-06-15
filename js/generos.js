@@ -10,12 +10,12 @@ fetch(url)
 
         let contenedor = document.querySelector(".losGeneros")
 
-        let hola = []
+        let contenido = []
 
         for (let i = 1; i < 7; i++) {
 
-            hola += `<article>
-                <a href="detalle-genero.html">
+            contenido += `<article>
+                <a href="detalle-genero.html?id=${data.data[i].id}">
                 <img src= "${data.data[i].picture_medium}" alt='' />
                 <p>${data.data[i].name} </p>
                 </a>
@@ -23,7 +23,7 @@ fetch(url)
 
         }
 
-        contenedor.innerHTML = hola
+        contenedor.innerHTML = contenido
 
     })
     .catch(function (error) {

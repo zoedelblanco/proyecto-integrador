@@ -1,6 +1,6 @@
 //canciones//
-let web = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
-fetch(web)
+let urlCanciones = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
+fetch(urlCanciones)
     .then(function (response) {
         return response.json()
     })
@@ -29,8 +29,8 @@ fetch(web)
 
 
 //albums//
-let link = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
-fetch(link)
+let urlAlbums = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
+fetch(urlAlbums)
     .then(function (response) {
         return response.json()
     })
@@ -56,8 +56,8 @@ fetch(link)
     })
 
 //artistas//
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
-fetch(url)
+let urlArtistas = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+fetch(urlArtistas)
     .then(function (response) {
         return response.json()
     })
