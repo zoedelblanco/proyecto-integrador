@@ -17,9 +17,8 @@ fetch(url)
         console.log(data);
 
         contenido += `<article class="detalleArtista">
-            <img class="imgArtista"src="${data.picture}" alt="">
+            <img class="imgArtista"src="${data.picture_medium}" alt="">
             <p>${data.name}</p>
-            
             </article>`
 
         detalle.innerHTML = contenido
@@ -30,8 +29,8 @@ fetch(url)
     })
     
     
-let listaAlbums = document.querySelector(".listaAlbums")
-contenidoAlbum = []
+let listaAlbums = document.querySelector(".listaAlbums");
+contenidoAlbum = "";
 
 let api= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=50`
 
@@ -44,7 +43,7 @@ fetch(api)
 
         for (i = 0; i < 5; i++) {
 
-            contenidoAlbum += `<article>${data.tracklist[i].data.album.title}</article>`;
+            contenidoAlbum += `<article>${data.album.title}</article>`;
 
         }
 
