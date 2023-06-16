@@ -41,6 +41,7 @@ fetch(url)
       console.log("Error: " + error);
    })
 
+   
 //formulario//
 let formulario = document.querySelector('form');
 let inputDeBusqueda = document.querySelector('input');
