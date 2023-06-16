@@ -49,7 +49,7 @@ fetch(api)
         for (i = 0; i < 5; i++) {
 
             contenidoAlbum += `<li>
-            <h3><a href="detalle-album.html?id=${data.data[i].id}">${data.data[i].title}</h3>
+            <a href="detalle-album.html?id=${data.data[i].id}">${data.data[i].title}
             </li>`;
 
         }
