@@ -198,9 +198,24 @@ img {
     display: flex;
     flex-wrap: nowrap;
     margin: 30px;
-    border-radius: 26px;
-    
+    border-radius: 26px;  
 }
+
+.album{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    border-radius: 26px;
+    background-color: #2c2b2b;
+}
+
+.album ul{
+    list-style-type: none;
+}
+
+
 
 /* FOOTER */
 footer {
