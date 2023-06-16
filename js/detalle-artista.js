@@ -7,7 +7,7 @@ let contenido = " ";
 
 
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
 
 fetch(url)
     .then(function (response) {
@@ -33,7 +33,7 @@ fetch(url)
 let listaAlbums = document.querySelector(".listaAlbums")
 contenidoAlbum = []
 
-let api= `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/top?limit=50`
+let api= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=50`
 
 fetch(api)
     .then(function (response) {

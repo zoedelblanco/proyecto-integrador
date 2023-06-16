@@ -1,5 +1,5 @@
 //canciones//
-let urlCanciones = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks"
+let urlCanciones = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks"
 fetch(urlCanciones)
     .then(function (response) {
         return response.json()
@@ -29,7 +29,7 @@ fetch(urlCanciones)
 
 
 //albums//
-let urlAlbums = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums"
+let urlAlbums = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums"
 fetch(urlAlbums)
     .then(function (response) {
         return response.json()
@@ -56,7 +56,7 @@ fetch(urlAlbums)
     })
 
 //artistas//
-let urlArtistas = "https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/artists"
+let urlArtistas = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists"
 fetch(urlArtistas)
     .then(function (response) {
         return response.json()

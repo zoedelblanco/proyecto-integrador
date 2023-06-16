@@ -6,7 +6,7 @@ let detalle = document.querySelector('.detalleAlbum');
 let contenido = '';
 
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}`;
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`;
 
 
 fetch(url)

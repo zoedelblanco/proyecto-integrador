@@ -5,7 +5,10 @@ let id = objetoId.get("id");
 let detalle = document.querySelector(".detalleCancion");
 let contenido = " ";
 
-let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
+let detalleAudio = document.querySelector(".audio");
+let contenidoAudio = " ";
+
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
 
 fetch(url)
    .then(function (response) {
@@ -22,6 +25,15 @@ fetch(url)
    </article>`
 
       detalle.innerHTML = contenido
+
+      contenidoAudio += `<article>
+      <audio controls>
+          <source src="${data.preview}" type="audio/ogg">
+       </audio>
+      </article>`
+
+      detalleAudio.innerHTML = contenidoAudio
+
    })
 
 
