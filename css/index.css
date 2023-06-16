@@ -193,6 +193,14 @@ img {
     border-radius: 26px;
 }
 
+.resultado{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px;
+    border-radius: 26px;
+    
+}
+
 /* FOOTER */
 footer {
     text-align: center;

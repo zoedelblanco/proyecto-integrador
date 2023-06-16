@@ -16,6 +16,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
          contenido += `<article class="resultados">
                         <img src="${data.data[i].album.cover_medium}" alt="">
                         <p class="resultados"><a href="detalle-cancion.html?id=${data.data[i].id}"> ${data.data[i].title} </a></p>
+                        
                      </article>`
       }
       resultados.innerHTML += contenido
