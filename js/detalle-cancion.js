@@ -41,8 +41,46 @@ fetch(url)
       console.log("Error: " + error);
    })
 
+//fav
 
-//formulario//
+let linkTop = document.querySelector('.favs');
+
+let recuperoStorage = localStorage.getItem('listaFavoritos');
+let storageToArray = JSON.parse(recuperoStorage);
+
+let topFavoritos = [];
+
+if (recuperoStorage !== null) {
+   topFavoritos = storageToArray
+}
+
+if (topFavoritos.includes(id)) {
+   linkTop.innerText = "Quitar de favoritos"
+}
+
+linkTop.addEventListener('click', function (e) {
+   e.preventDefault();
+
+   if (topFavoritos.includes(id)) {
+
+      let posicion = topFavoritos.indexOf(id);
+      topFavoritos.splice(posicion, 1);
+      linkTop.innerText = "Agregar a favoritos";
+
+   } else {
+
+      topFavoritos.push(id);
+      linkTop.innerText = "Quitar de favoritos";
+   }
+
+   songsJason = JSON.stringify(topFavoritos);
+   localStorage.setItem("listaFavoritos", songsJason)
+
+   console.log(localStorage);
+})
+
+
+//formulario
 let formulario = document.querySelector('form');
 let inputDeBusqueda = document.querySelector('input');
 

@@ -1,20 +1,24 @@
-/* 
+/* let playlist = document.querySelector(".cancionesPlaylist");
+let arrayPlaylist = JSON.parse(localStorage.getItem("playlist"))
+let contenido = [];
 
-let play = document.querySelector(".playlist")
+localStorage.setItem("playlist", JSON.stringify(arrayPlaylist));
 
-let arrayPlay = JSON.parse(localStorage.getItem("playlist"))
-
-let contenido = []
-
-let arrayArtistas = data.data
-
-if (arrayPlay == null){
+if (arrayPlaylist == null) {
     alert('La playlist esta vacia')
-}else{
-    for(i=0 , i<arrayPlay.length , i++)
+} else {
+    for (let i = 0; i < arrayPlaylist.length; i++) {
+
+        let song = JSON.parse(arrayPlaylist[i])
+        contenido += `<li class="cancionesPlaylist">
+        <a href="detalle-cancion.html?id=${song.id}"><p>${song.title}</p></a>
+        </li>`
+    }
+
+    playlist.innerHTML = contenido
 }
 
- */
+console.log(arrayPlaylist); */
 
 //formulario//
 let formulario = document.querySelector('form');

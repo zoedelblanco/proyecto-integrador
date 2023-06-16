@@ -22,22 +22,10 @@ fetch(urlCanciones)
         }
         contenedor.innerHTML = home
 
-        /* let listaContenedor = document.querySelector(".canciones");
-        let contenidoCancion = "" 
-
-        for(let i=0; i<data.data.length; i++){
-            contenidoCancion += `<article>
-            <img src= "${data.data[i].album.cover_medium}" alt=''>
-            <p>${data.data[i].title} </p>
-            </article>`
-        }
-        listaContenedor.innerHTML = contenidoCancion */
-
     })
     .catch(function (error) {
         console.log("Error: " + error);
     })
-
 
 
 //albums//
@@ -52,7 +40,7 @@ fetch(urlAlbums)
         let contenedor = document.querySelector(".albumes");
         let home = [];
 
-        for (let i = 4; i < 9; i++) {
+        for (let i = 4; i < 10; i++) {
             home += `<ul>
             <a href="detalle-album.html?id=${data.data[i].id}">
             <img src= "${data.data[i].cover_medium}" alt=''>
@@ -111,4 +99,3 @@ formulario.addEventListener('submit', function (e) {
         this.submit()
     }
 })
-
