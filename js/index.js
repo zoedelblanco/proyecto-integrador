@@ -21,6 +21,24 @@ fetch(urlCanciones)
 
         }
         contenedor.innerHTML = home
+    
+    .then(function(data){
+        console.log(data);
+        let listaContenedor = document.querySelector(".canciones");
+        let contenidoCancion = "" 
+
+        for(let i=0; i<data.data.length; i++){
+            contenidoCancion += `<article>
+            <img src= "${data.data[i].album.cover_medium}" alt=''>
+            <p>${data.data[i].title} </p>
+            </article>`
+        }
+        listaContenedor.innerHTML = contenidoCancion
+
+
+    })
+
+    
     })
     .catch(function (error) {
         console.log("Error: " + error);
