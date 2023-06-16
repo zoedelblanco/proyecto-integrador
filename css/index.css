@@ -61,7 +61,7 @@ h5 {
     margin-top: 2px;
 }
 
-h1 {
+h2 {
     color: white;
 }
 
@@ -141,7 +141,7 @@ article h1 {
     justify-content: center;
 }
 
-h1.home {
+h2.home {
     align-items: center;
 }
 
