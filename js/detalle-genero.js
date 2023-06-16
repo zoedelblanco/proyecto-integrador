@@ -5,7 +5,7 @@ let id = objetoId.get('id');
 let detalle = document.querySelector('.generoArtista');
 let contenido = '';
 
-let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`;
+let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`;
 
 fetch(urlArtistas)
     .then(function (response) {
@@ -32,7 +32,7 @@ fetch(urlArtistas)
     })
 
 
-let urlGeneros = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
+let urlGeneros = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}`;
 
 let titulo = document.querySelector(".tituloDetalleGenero")
 

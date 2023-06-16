@@ -8,7 +8,7 @@ let contenido = " ";
 let detalleAudio = document.querySelector(".audio");
 let contenidoAudio = " ";
 
-let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
 
 fetch(url)
    .then(function (response) {

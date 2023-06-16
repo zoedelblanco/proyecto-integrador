@@ -6,7 +6,7 @@ let detalle = document.querySelector('.detalleAlbum');
 let contenido = '';
 
 
-let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`;
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/album/${id}`;
 
 
 fetch(url)
@@ -37,7 +37,9 @@ fetch(url)
 
       for (let i = 0; i < 5; i++) {
 
-         contenido += `<article>${data.tracks.data[i].title}</article>`;
+         contenido += `<li>
+         <a href="detalle-cancion.html?id=${data.tracks.data[i].id}">${data.tracks.data[i].title}</a>
+         </li>`
 
       }
 

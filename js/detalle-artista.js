@@ -5,7 +5,7 @@ let id = objetoId.get("id");
 let detalle = document.querySelector(".detalleArtista");
 let contenido = "";
 
-let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`
 
 fetch(url)
     .then(function (response) {
@@ -33,7 +33,7 @@ let queryStringLista = window.location.search
 let objetoIdLista = new URLSearchParams(queryStringLista);
 let idLista = objetoId.get("id");
 
-let api = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums`
+let api = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}/albums`
 
 fetch(api)
     .then(function (response) {
@@ -49,7 +49,7 @@ fetch(api)
         for (i = 0; i < 5; i++) {
 
             contenidoAlbum += `<li>
-            <a href="detalle-album.html?id=${data.data[i].id}">${data.data[i].title}
+            <a href="detalle-album.html?id=${data.data[i].id}">${data.data[i].title}</a>
             </li>`;
 
         }

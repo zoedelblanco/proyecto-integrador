@@ -5,7 +5,7 @@ let contenido = ''
 let titulo = document.querySelector('.busqueda')
 titulo.innerHTML += buscar
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${buscar}`)
+fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/search?q=${buscar}`)
    .then(function (response) {
       return response.json()
    })
