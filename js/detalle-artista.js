@@ -3,9 +3,7 @@ let objetoId = new URLSearchParams(queryString);
 let id = objetoId.get("id");
 
 let detalle = document.querySelector(".detalleArtista");
-let contenido = " ";
-
-
+let contenido = "";
 
 let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
 
@@ -27,12 +25,15 @@ fetch(url)
     .catch(function (error) {
         console.log("Error: " + error);
     })
-    
-    
-let listaAlbums = document.querySelector(".listaAlbums");
-contenidoAlbum = "";
 
-let api= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/top?limit=50`
+
+//lista album
+
+let queryStringLista = window.location.search
+let objetoIdLista = new URLSearchParams(queryStringLista);
+let idLista = objetoId.get("id");
+
+let api = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums`
 
 fetch(api)
     .then(function (response) {
@@ -41,9 +42,15 @@ fetch(api)
     .then(function (data) {
         console.log(data);
 
+        let listaAlbums = document.querySelector(".content");
+        console.log(listaAlbums);
+        contenidoAlbum = "";
+
         for (i = 0; i < 5; i++) {
 
-            contenidoAlbum += `<article>${data.album.title}</article>`;
+            contenidoAlbum += `<li>
+            <h3><a href="detalle-album.html?id=${data.data[i].id}">${data.data[i].title}</h3>
+            </li>`;
 
         }
 

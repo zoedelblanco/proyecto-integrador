@@ -18,11 +18,11 @@ fetch(url)
       console.log(data);
 
       contenido += `<article class="detalleCancion">
-   <img src="${data.album.cover_medium}" alt="">
-   <p>${data.title}</p>
-   <p>${data.artist.name}</p>
-   <p>${data.album.title}</p>
-   </article>`
+         <img src="${data.album.cover_medium}" alt="">
+         <p>${data.title}</p>
+         <p>${data.artist.name}</p>
+         <p>${data.album.title}</p>
+      </article>`
 
       detalle.innerHTML = contenido
 
@@ -41,20 +41,20 @@ fetch(url)
       console.log("Error: " + error);
    })
 
-   
+
 //formulario//
 let formulario = document.querySelector('form');
 let inputDeBusqueda = document.querySelector('input');
 
 formulario.addEventListener('submit', function (e) {
-    e.preventDefault();
+   e.preventDefault();
 
-    if (inputDeBusqueda.value === "") {
-        alert('El campo de busqueda no puede estar vacio')
-    }
-    else if (inputDeBusqueda.value.length < 3) {
-        alert('Lo buscado debe tener al menos 3 caracteres');
-    } else {
-        this.submit()
-    }
+   if (inputDeBusqueda.value === "") {
+      alert('El campo de busqueda no puede estar vacio')
+   }
+   else if (inputDeBusqueda.value.length < 3) {
+      alert('Lo buscado debe tener al menos 3 caracteres');
+   } else {
+      this.submit()
+   }
 })

@@ -21,7 +21,7 @@ fetch(urlCanciones)
 
         }
         contenedor.innerHTML = home
-        
+
         /* let listaContenedor = document.querySelector(".canciones");
         let contenidoCancion = "" 
 
@@ -32,7 +32,7 @@ fetch(urlCanciones)
             </article>`
         }
         listaContenedor.innerHTML = contenidoCancion */
-    
+
     })
     .catch(function (error) {
         console.log("Error: " + error);
