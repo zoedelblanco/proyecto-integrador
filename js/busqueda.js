@@ -14,6 +14,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
 
       for (let i = 0; i < data.data.length; i++) {
          contenido += `<article class="resultados">
+                        <img src="${data.data[i].album.cover_medium}" alt="">
                         <p class="resultados"><a href="detalle-cancion.html?id=${data.data[i].id}"> ${data.data[i].title} </a></p>
                      </article>`
       }
@@ -26,3 +27,20 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${bus
    .catch(function (error) {
       console.log("Error: " + error);
    })
+
+//formulario//
+let formulario = document.querySelector('form');
+let inputDeBusqueda = document.querySelector('input');
+
+formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (inputDeBusqueda.value === "") {
+        alert('El campo de busqueda no puede estar vacio')
+    }
+    else if (inputDeBusqueda.value.length < 3) {
+        alert('Lo buscado debe tener al menos 3 caracteres');
+    } else {
+        this.submit()
+    }
+})
