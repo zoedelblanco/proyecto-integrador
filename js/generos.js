@@ -12,7 +12,7 @@ fetch(url)
 
         let contenido = []
 
-        for (let i = 1; i < 7; i++) {
+        for (let i = 1; i < 9; i++) {
 
             contenido += `<article>
                 <a href="detalle-genero.html?id=${data.data[i].id}">
