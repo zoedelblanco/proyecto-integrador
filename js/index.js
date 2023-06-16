@@ -21,10 +21,8 @@ fetch(urlCanciones)
 
         }
         contenedor.innerHTML = home
-    
-    .then(function(data){
-        console.log(data);
-        let listaContenedor = document.querySelector(".canciones");
+        
+        /* let listaContenedor = document.querySelector(".canciones");
         let contenidoCancion = "" 
 
         for(let i=0; i<data.data.length; i++){
@@ -33,11 +31,7 @@ fetch(urlCanciones)
             <p>${data.data[i].title} </p>
             </article>`
         }
-        listaContenedor.innerHTML = contenidoCancion
-
-
-    })
-
+        listaContenedor.innerHTML = contenidoCancion */
     
     })
     .catch(function (error) {
