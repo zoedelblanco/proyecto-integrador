@@ -17,8 +17,9 @@ if (arrayPlaylist == null) {
 
     playlist.innerHTML = contenido
 }
+*/
 
-console.log(arrayPlaylist); */
+console.log(arrayPlaylist); 
 
 //formulario//
 let formulario = document.querySelector('form');
