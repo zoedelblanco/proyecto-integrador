@@ -1,8 +1,8 @@
 let playlist = document.querySelector(".cancionesPlaylist");
-let arrayPlaylist = JSON.parse(localStorage.getItem("playlist"))
+let arrayPlaylist = JSON.parse(sessionStorage.getItem("playlist"))
 let contenido = [];
 
-localStorage.setItem("playlist", JSON.stringify(arrayPlaylist));
+sessionStorage.setItem("playlist", JSON.stringify(arrayPlaylist));
 
 if (arrayPlaylist == null) {
     alert('La playlist esta vacia')
