@@ -40,7 +40,7 @@ fetch(urlAlbums)
         let contenedor = document.querySelector(".albumes");
         let home = [];
 
-        for (let i = 4; i < 10; i++) {
+        for (let i = 2; i < 10; i++) {
             home += `<ul>
             <a href="detalle-album.html?id=${data.data[i].id}">
             <img src= "${data.data[i].cover_medium}" alt=''>
