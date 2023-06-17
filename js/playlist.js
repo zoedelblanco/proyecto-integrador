@@ -1,4 +1,4 @@
-/* let playlist = document.querySelector(".cancionesPlaylist");
+let playlist = document.querySelector(".cancionesPlaylist");
 let arrayPlaylist = JSON.parse(localStorage.getItem("playlist"))
 let contenido = [];
 
@@ -17,9 +17,8 @@ if (arrayPlaylist == null) {
 
     playlist.innerHTML = contenido
 }
-*/
 
-console.log(arrayPlaylist); 
+console.log(arrayPlaylist);
 
 //formulario//
 let formulario = document.querySelector('form');
